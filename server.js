@@ -20,16 +20,16 @@ app.use((req, res, next) => {
   }
 });
 
-// Serve static files from public directory
-app.use(express.static(path.join(__dirname, 'public')));
-
-// Routes
+// API Routes
 app.use('/notes', notesRoutes);
 
-// Health check endpoint
-app.get('/', (req, res) => {
+// API Health check endpoint
+app.get('/api', (req, res) => {
   res.json({ message: 'Notes API is running!' });
 });
+
+// Serve static files from public directory (this should be last)
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Start server
 app.listen(PORT, () => {
