@@ -4,6 +4,7 @@ A simple REST API for managing notes built with Node.js and Express.
 
 ## Features
 
+### Backend API
 - ✅ Get all notes
 - ✅ Create a new note
 - ✅ Get a specific note by ID
@@ -13,6 +14,15 @@ A simple REST API for managing notes built with Node.js and Express.
 - ✅ Proper HTTP status codes
 - ✅ Error handling
 - ✅ Clean code organization
+
+### Frontend Web App
+- ✅ Modern, responsive web interface
+- ✅ Create notes with title and content
+- ✅ View all notes in a clean card layout
+- ✅ Edit existing notes with modal dialog
+- ✅ Delete notes with confirmation
+- ✅ Real-time status messages
+- ✅ Mobile-friendly design
 
 ## Installation & Setup
 
@@ -33,6 +43,20 @@ npm run dev
 ```
 
 The server will automatically find an available port (default: 3000, fallback: 5000, etc.)
+
+## 🌐 Web Interface
+
+Once the server is running, open your web browser and go to:
+```
+
+http://127.0.0.1:5000
+```
+
+You'll see a beautiful web interface where you can:
+- ➕ Create new notes
+- 📝 Edit existing notes
+- 🗑️ Delete notes
+- 🔄 Refresh the notes list
 
 ## Quick Test
 
@@ -126,12 +150,16 @@ curl -Method DELETE -Uri "http://127.0.0.1:5000/notes/1"
 ### Method 1: Command Line (curl)
 Use the curl commands shown above in your terminal/PowerShell.
 
-### Method 2: Web Browser
+### Method 2: Web Interface (Recommended)
+- Open `http://127.0.0.1:5000/` in your browser for the full web app
+- Use the intuitive interface to create, edit, and delete notes
+
+### Method 3: Direct API Browser Testing
 - Health check: `http://127.0.0.1:5000/`
 - Get all notes: `http://127.0.0.1:5000/notes`
 - Get specific note: `http://127.0.0.1:5000/notes/1`
 
-### Method 3: API Testing Tools
+### Method 4: API Testing Tools
 - **Postman**: Import the endpoints and test with a GUI
 - **Thunder Client** (VS Code extension): Test directly in VS Code
 - **Insomnia**: Another popular API testing tool
